@@ -1,27 +1,16 @@
 package com.xformation.restaurant.domain.model;
 
 import java.math.BigDecimal;
+import java.util.Map;
 
-public class Meal {
-    private BigDecimal price;
-    private String name;
-    private Cuisine cuisine;
+public interface Meal {
+    BigDecimal getPrice();
 
-    public Meal(BigDecimal price, String name, Cuisine cuisine) {
-        this.price = price;
-        this.name = name;
-        this.cuisine = cuisine;
-    }
+    String getName();
 
-    public BigDecimal getPrice() {
-        return price;
-    }
+    Cuisine getCuisine();
 
-    public String getName() {
-        return name;
-    }
-
-    public Cuisine getCuisine() {
-        return cuisine;
+    default Map<Additive, Integer> getAdditives() {
+        return null;
     }
 }

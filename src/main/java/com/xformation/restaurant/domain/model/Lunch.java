@@ -1,20 +1,15 @@
 package com.xformation.restaurant.domain.model;
 
+import java.util.List;
+
 public class Lunch {
-    private Meal meal;
-    private Dessert dessert;
+    private List<Meal> meals;
 
-    public Lunch(Meal meal, Dessert dessert) {
-        this.meal = meal;
-        this.dessert = dessert;
+    public Lunch(List<Meal> meals) {
+        this.meals = meals;
     }
 
-    public Meal getMeal() {
-        return meal;
+    public List<Meal> getMeals() {
+        return meals;
     }
-
-    public Dessert getDessert() {
-        return dessert;
-    }
-
 }

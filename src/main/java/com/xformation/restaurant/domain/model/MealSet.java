@@ -1,7 +1,7 @@
 package com.xformation.restaurant.domain.model;
 
-import java.util.List;
+import java.util.Map;
 
 public interface MealSet {
-    List<Meal> getMeals();
+    Map<Meal,Integer> getMeals();
 }

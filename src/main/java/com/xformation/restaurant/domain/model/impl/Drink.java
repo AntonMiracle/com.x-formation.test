@@ -21,6 +21,28 @@ public class Drink implements Meal {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Drink drink = (Drink) o;
+
+        if (price != null ? !price.equals(drink.price) : drink.price != null) return false;
+        if (name != null ? !name.equals(drink.name) : drink.name != null) return false;
+        if (additives != null ? !additives.equals(drink.additives) : drink.additives != null) return false;
+        return cuisine == drink.cuisine;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = price != null ? price.hashCode() : 0;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (additives != null ? additives.hashCode() : 0);
+        result = 31 * result + (cuisine != null ? cuisine.hashCode() : 0);
+        return result;
+    }
+
+    @Override
     public BigDecimal getPrice() {
         return price;
     }

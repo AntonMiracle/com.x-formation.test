@@ -10,7 +10,7 @@ public interface MenuUnitService<T extends MenuUnit> {
 
     boolean remove(T menuUnitToRemove);
 
-    Optional<T> findByName(String name);
+    Optional<T> findByName(String menuUnitName);
 
     boolean isUnique(T menuUnitToCheck);
 

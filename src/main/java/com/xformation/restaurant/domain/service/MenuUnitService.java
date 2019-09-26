@@ -6,17 +6,16 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
-public interface MenuUnitService {
-    Optional<MenuUnit> addMenuUnit(String menuUnitName, BigDecimal menuUnitPrice);
+public interface MenuUnitService<T extends MenuUnit> {
+    Optional<T> add(String menuUnitName, BigDecimal menuUnitPrice);
 
-    boolean removeMenuUnit(MenuUnit menuUnitToRemove);
+    boolean remove(MenuUnit menuUnitToRemove);
 
-    Optional<MenuUnit> findMenuUnitByName(String name);
+    Optional<T> findByName(String name);
 
-    boolean isMenuUnitUnique(MenuUnit menuUnitToCheck);
+    boolean isUnique(MenuUnit menuUnitToCheck);
 
-    List<MenuUnit> findAllMenuUnit();
-
+    List<T> findAllMenuUnit();
 
 
 }

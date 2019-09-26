@@ -5,6 +5,7 @@ import com.xformation.restaurant.domain.model.Cuisine;
 import com.xformation.restaurant.domain.model.Meal;
 
 import java.math.BigDecimal;
+import java.util.HashMap;
 import java.util.Map;
 
 public class Drink implements Meal {
@@ -13,10 +14,10 @@ public class Drink implements Meal {
     private Map<Additive, Integer> additives;
     private Cuisine cuisine;
 
-    public Drink(BigDecimal price, String name, Map<Additive, Integer> additives, Cuisine cuisine) {
+    public Drink(BigDecimal price, String name, Cuisine cuisine) {
         this.price = price;
         this.name = name;
-        this.additives = additives;
+        this.additives = new HashMap<>();
         this.cuisine = cuisine;
     }
 

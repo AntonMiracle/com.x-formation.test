@@ -18,11 +18,9 @@ public class CourseRepository implements MenuUnitRepository {
 
     @Override
     public MenuUnit findByName(String name) {
-        if (repository.stream().filter(menuUnit -> menuUnit.getName().equals(name)).count() != 0) {
-            for (MenuUnit unit : repository) {
-                if (unit.getName().equals(name)) {
-                    return unit;
-                }
+        for (MenuUnit unit : repository) {
+            if (unit.getName().equals(name)) {
+                return unit;
             }
         }
         return null;

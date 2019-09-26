@@ -45,12 +45,12 @@ public class Lunch implements MealSet {
 
     @Override
     public Map<Meal, Integer> getMeals() {
-        return null;
+        return meals;
     }
 
     @Override
     public BigDecimal getPrice() {
-        return null;
+        return price
     }
 
     @Override
@@ -75,6 +75,7 @@ public class Lunch implements MealSet {
 
     @Override
     public String getName() {
-        return null;
+        return name;
     }
+
 }

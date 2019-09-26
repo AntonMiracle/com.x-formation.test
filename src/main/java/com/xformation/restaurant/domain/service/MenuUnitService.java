@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface MenuUnitService<T extends MenuUnit> {
-    Optional<T> add(T menuUnit);
+    Optional<T> add(T menuUnitToAdd);
 
     boolean remove(T menuUnitToRemove);
 

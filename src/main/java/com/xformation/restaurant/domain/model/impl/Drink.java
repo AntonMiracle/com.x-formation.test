@@ -58,6 +58,16 @@ public class Drink implements Meal {
     }
 
     @Override
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
     public Map<Additive, Integer> getAdditives() {
         return additives;
     }

@@ -47,6 +47,16 @@ public class Dessert implements Meal {
     }
 
     @Override
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
     public Cuisine getCuisine() {
         return cuisine;
     }

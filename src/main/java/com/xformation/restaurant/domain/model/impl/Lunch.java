@@ -48,6 +48,16 @@ public class Lunch implements MealSet {
     }
 
     @Override
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
     public String getName() {
         return null;
     }

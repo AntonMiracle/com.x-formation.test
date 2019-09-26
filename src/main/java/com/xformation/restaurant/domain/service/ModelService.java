@@ -4,23 +4,24 @@ import com.xformation.restaurant.domain.model.MenuUnit;
 import com.xformation.restaurant.domain.model.Order;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ModelService {
-    MenuUnit addMenuUnit(MenuUnit menuUnit);
+    Optional<MenuUnit> addMenuUnit(MenuUnit menuUnitToAdd);
 
-    boolean removeMenuUnit(MenuUnit menuUnit);
+    boolean removeMenuUnit(MenuUnit menuUnitToRemove);
 
-    MenuUnit findMenuUnitByName(String name);
+    Optional<MenuUnit> findMenuUnitByName(String name);
 
-    boolean isMenuUnitNameUnique(String name);
+    boolean isMenuUnitUnique(MenuUnit menuUnitToCheck);
 
     List<MenuUnit> findAllMenuUnit();
 
-    Order openOrder(Order order);
+    Optional<Order> openOrder(Order orderToOpen);
 
-    boolean closeOrder(Order order);
+    boolean closeOrder(Order orderToClose);
 
-    Order findOrderById(Long id);
+    Optional<Order> findOrderById(Long orderId);
 
     List<Order> findAllOrders();
 

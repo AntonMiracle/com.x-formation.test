@@ -10,4 +10,8 @@ public interface MenuUnit {
     void setPrice(BigDecimal price);
 
     void setName(String name);
+
+    Cuisine getCuisine();
+
+    void setCuisine(Cuisine cuisine);
 }

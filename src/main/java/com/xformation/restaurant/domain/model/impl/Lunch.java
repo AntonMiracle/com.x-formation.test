@@ -1,8 +1,8 @@
 package com.xformation.restaurant.domain.model.impl;
 
 import com.xformation.restaurant.domain.model.Cuisine;
-import com.xformation.restaurant.domain.model.Meal;
 import com.xformation.restaurant.domain.model.MealSet;
+import com.xformation.restaurant.domain.model.MenuUnit;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
@@ -11,7 +11,7 @@ import java.util.Map;
 public class Lunch implements MealSet {
     private BigDecimal price;
     private String name;
-    private Map<Meal, Integer> meals;
+    private Map<MenuUnit, Integer> meals;
     private Cuisine cuisine;
 
     public Lunch(BigDecimal price, String name, Cuisine cuisine) {
@@ -44,7 +44,7 @@ public class Lunch implements MealSet {
     }
 
     @Override
-    public Map<Meal, Integer> getMeals() {
+    public Map<MenuUnit, Integer> getMeals() {
         return meals;
     }
 

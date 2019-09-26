@@ -61,4 +61,9 @@ public class Dessert implements Meal {
         return cuisine;
     }
 
+    @Override
+    public void setCuisine(Cuisine cuisine) {
+        this.cuisine = cuisine;
+    }
+
 }

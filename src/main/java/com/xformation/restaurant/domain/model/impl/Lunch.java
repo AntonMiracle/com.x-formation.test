@@ -50,7 +50,7 @@ public class Lunch implements MealSet {
 
     @Override
     public BigDecimal getPrice() {
-        return price
+        return price;
     }
 
     @Override

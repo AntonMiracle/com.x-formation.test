@@ -1,5 +1,6 @@
 package com.xformation.restaurant.domain.model.impl;
 
+import com.xformation.restaurant.domain.model.Cuisine;
 import com.xformation.restaurant.domain.model.Meal;
 import com.xformation.restaurant.domain.model.MealSet;
 
@@ -10,11 +11,13 @@ public class Lunch implements MealSet {
     private BigDecimal price;
     private String name;
     private Map<Meal, Integer> meals;
+    private Cuisine cuisine;
 
-    public Lunch(BigDecimal price, String name, Map<Meal, Integer> meals) {
+    public Lunch(BigDecimal price, String name, Map<Meal, Integer> meals, Cuisine cuisine) {
         this.price = price;
         this.name = name;
         this.meals = meals;
+        this.cuisine = cuisine;
     }
 
     @Override
@@ -26,7 +29,8 @@ public class Lunch implements MealSet {
 
         if (price != null ? !price.equals(lunch.price) : lunch.price != null) return false;
         if (name != null ? !name.equals(lunch.name) : lunch.name != null) return false;
-        return meals != null ? meals.equals(lunch.meals) : lunch.meals == null;
+        if (meals != null ? !meals.equals(lunch.meals) : lunch.meals != null) return false;
+        return cuisine == lunch.cuisine;
     }
 
     @Override
@@ -34,6 +38,7 @@ public class Lunch implements MealSet {
         int result = price != null ? price.hashCode() : 0;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (meals != null ? meals.hashCode() : 0);
+        result = 31 * result + (cuisine != null ? cuisine.hashCode() : 0);
         return result;
     }
 
@@ -55,6 +60,16 @@ public class Lunch implements MealSet {
     @Override
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public Cuisine getCuisine() {
+        return cuisine;
+    }
+
+    @Override
+    public void setCuisine(Cuisine cuisine) {
+        this.cuisine = cuisine;
     }
 
     @Override

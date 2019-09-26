@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class DrinkRepositoryImpl implements MenuUnitRepository {
+public class DrinkRepository implements MenuUnitRepository {
     private static final Set<MenuUnit> repository = new HashSet<>();
 
     @Override

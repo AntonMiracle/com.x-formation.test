@@ -15,7 +15,7 @@ public interface MenuUnitService<T extends MenuUnit> {
 
     boolean isUnique(MenuUnit menuUnitToCheck);
 
-    List<T> findAllMenuUnit();
+    List<T> findAll();
 
 
 }

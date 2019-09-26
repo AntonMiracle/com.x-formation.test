@@ -35,10 +35,10 @@ public class CourseService implements MenuUnitService<Course> {
     }
 
     @Override
-    public Optional<Course> findByName(String name) {
-        if (validator.isMenuUnitNameValid(name)) {
+    public Optional<Course> findByName(String menuUnitName) {
+        if (validator.isMenuUnitNameValid(menuUnitName)) {
             for (Course course : findAll()) {
-                if (course.getName().equals(name)) {
+                if (course.getName().equals(menuUnitName)) {
                     return Optional.of(course);
                 }
             }

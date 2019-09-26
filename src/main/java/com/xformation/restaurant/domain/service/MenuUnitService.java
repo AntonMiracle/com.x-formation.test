@@ -1,13 +1,13 @@
 package com.xformation.restaurant.domain.service;
 
 import com.xformation.restaurant.domain.model.MenuUnit;
-import com.xformation.restaurant.domain.model.Order;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
-public interface ModelService {
-    Optional<MenuUnit> addMenuUnit(MenuUnit menuUnitToAdd);
+public interface MenuUnitService {
+    Optional<MenuUnit> addMenuUnit(String menuUnitName, BigDecimal menuUnitPrice);
 
     boolean removeMenuUnit(MenuUnit menuUnitToRemove);
 
@@ -17,12 +17,6 @@ public interface ModelService {
 
     List<MenuUnit> findAllMenuUnit();
 
-    Optional<Order> openOrder(Order orderToOpen);
 
-    boolean closeOrder(Order orderToClose);
-
-    Optional<Order> findOrderById(Long orderId);
-
-    List<Order> findAllOrders();
 
 }

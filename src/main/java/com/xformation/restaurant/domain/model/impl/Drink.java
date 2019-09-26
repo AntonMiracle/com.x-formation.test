@@ -53,11 +53,6 @@ public class Drink implements Meal {
     }
 
     @Override
-    public Cuisine getCuisine() {
-        return cuisine;
-    }
-
-    @Override
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
@@ -65,6 +60,16 @@ public class Drink implements Meal {
     @Override
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public Cuisine getCuisine() {
+        return cuisine;
+    }
+
+    @Override
+    public void setCuisine(Cuisine cuisine) {
+        this.cuisine = cuisine;
     }
 
     @Override

@@ -66,4 +66,12 @@ public class Course implements Meal {
         this.cuisine = cuisine;
     }
 
+    @Override
+    public String toString() {
+        return "Course{" +
+                "price=" + price +
+                ", name='" + name + '\'' +
+                ", cuisine=" + cuisine +
+                '}';
+    }
 }

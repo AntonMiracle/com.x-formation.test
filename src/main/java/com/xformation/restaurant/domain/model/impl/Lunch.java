@@ -78,4 +78,13 @@ public class Lunch implements MealSet {
         return name;
     }
 
+    @Override
+    public String toString() {
+        return "Lunch{" +
+                "price=" + price +
+                ", name='" + name + '\'' +
+                ", meals=" + meals +
+                ", cuisine=" + cuisine +
+                '}';
+    }
 }

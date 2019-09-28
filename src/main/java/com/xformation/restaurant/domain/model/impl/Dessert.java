@@ -66,4 +66,12 @@ public class Dessert implements Meal {
         this.cuisine = cuisine;
     }
 
+    @Override
+    public String toString() {
+        return "Dessert{" +
+                "price=" + price +
+                ", name='" + name + '\'' +
+                ", cuisine=" + cuisine +
+                '}';
+    }
 }

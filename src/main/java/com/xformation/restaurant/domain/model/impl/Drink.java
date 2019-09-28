@@ -77,4 +77,14 @@ public class Drink implements Meal {
     public Map<Additive, Integer> getAdditives() {
         return additives;
     }
+
+    @Override
+    public String toString() {
+        return "Drink{" +
+                "price=" + price +
+                ", name='" + name + '\'' +
+                ", additives=" + additives +
+                ", cuisine=" + cuisine +
+                '}';
+    }
 }
